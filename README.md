@@ -72,7 +72,7 @@ classifier.call(['word2' 'word3'])
 Currently module `BowTfidf` it is algorithm written in ruby. But its not optimized.
 To improve performance and memmory usage create dump of built BOW with light data structure(without unnecessary for classifier attributes) and custom classifier which can work with the dump.
 
-###Split text into words(tokens)
+### Split text into words(tokens)
 ```ruby
 BowTfidf::Tokenizer.new.call('word word2, some! text')
 # <Set: {"word", "word2", "some", "text"}>
