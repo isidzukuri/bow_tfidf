@@ -1,5 +1,7 @@
 module BowTfidf
   class Tokenizer
+    SPLIT_REGEX = /[\s\n\t\.,\-\!:()\/%\\+\|@^<«>*'~;=»\?—•$”\"’\[£“■‘\{#®♦°™€¥\]©§\}–]/
+
     attr_reader :tokens
 
     def initialize
@@ -21,7 +23,7 @@ module BowTfidf
     private
 
     def split(text)
-      text.split(/[\s\n\t\.,\-\!:()\/%\\+\|@^<«>*'~;=»\?—•$”\"’\[£“■‘\{#®♦°™€¥\]©§\}–]/)
+      text.split(SPLIT_REGEX)
     end
 
     def process_item(token)
