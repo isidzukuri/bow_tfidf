@@ -53,7 +53,8 @@ module BowTfidf
       sorted = score.sort_by { |_k, v| v }.reverse
       result_hash = {}
       sorted.each do |item|
-        result_hash[category_by_id(item[0])[:key]] = item[1]
+        key = category_by_id(item[0])[:key]
+        result_hash[key] = item[1]
       end
 
       result_hash
