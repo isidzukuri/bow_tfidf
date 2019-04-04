@@ -41,7 +41,7 @@ RSpec.describe BowTfidf::Classifier do
     end
 
     it 'not recognize category if all given words not present in BOW' do
-      result = instance.call(['unknown', 'token'])
+      result = instance.call(%w[unknown token])
 
       expect(result[:category_key]).to eq(nil)
       expect(result[:score]).to eq({})
@@ -53,6 +53,5 @@ RSpec.describe BowTfidf::Classifier do
       expect(result[:category_key]).to eq(nil)
       expect(result[:score]).to eq({})
     end
-
   end
 end
