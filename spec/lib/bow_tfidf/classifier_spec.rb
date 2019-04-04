@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'awesome_print'
 
 RSpec.describe BowTfidf::Classifier do
   it 'raises exception if params not valid' do

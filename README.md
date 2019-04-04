@@ -33,8 +33,6 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
-
 First of all bag of words with computed tfidf for each word should be created. For this add labeled words as a hash to bag of words:
 
 ```ruby
