@@ -18,5 +18,20 @@ RSpec.describe BowTfidf::Tokenizer do
       result = instance.call('word word')
       expect(result).to eq(Set['word'])
     end
+
+    it 'ignores too short words' do
+      result = instance.call('medal of honor')
+      expect(result).to eq(Set['medal', 'honor'])
+    end
+
+    it 'ignores too long words' do
+      result = instance.call('word: antidisestablishmentarianism')
+      expect(result).to eq(Set['word'])
+    end
+
+    it 'ignores long digits' do
+      result = instance.call('1234567')
+      expect(result).to eq(Set[])
+    end
   end
 end

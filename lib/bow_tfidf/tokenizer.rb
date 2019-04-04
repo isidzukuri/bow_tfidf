@@ -1,6 +1,8 @@
 module BowTfidf
   class Tokenizer
     SPLIT_REGEX = /[\s\n\t\.,\-\!:()\/%\\+\|@^<«>*'~;=»\?—•$”\"’\[£“■‘\{#®♦°™€¥\]©§\}–]/
+    TOKEN_MIN_LENGTH = 3
+    TOKEN_MAX_LENGTH = 15
 
     attr_reader :tokens
 
@@ -27,8 +29,8 @@ module BowTfidf
     end
 
     def process_item(token)
-      return if token.length > 15
-      return if token.length < 3
+      return if token.length > TOKEN_MAX_LENGTH
+      return if token.length < TOKEN_MIN_LENGTH
       return if token.scan(/\D/).empty? # skip if str contains only digits
 
       tokens << token.downcase
