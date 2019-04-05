@@ -10,15 +10,15 @@ module BowTfidf
     def add_labeled_data!(data)
       validate_labeled_data(data)
 
-      data.each do |category_key, lexical_items|
+      data.each do |category_key, category_words|
         category = category_by_key(category_key)
 
-        lexical_items.each do |word|
+        category_words.each do |word|
           add_word(word, category)
         end
       end
 
-      compute
+      compute_tfidf
     end
 
     private
@@ -52,7 +52,7 @@ module BowTfidf
       categories[key]
     end
 
-    def compute
+    def compute_tfidf
       Computation.new(self).call
     end
   end
