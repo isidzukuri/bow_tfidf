@@ -27,7 +27,7 @@ module BowTfidf
       raise(ArgumentError, 'Hash with arrays expected') unless data.is_a?(Hash)
 
       data.values.each do |array|
-        raise(ArgumentError, 'Hash with arrays expected') unless array.is_a?(Array)
+        raise(ArgumentError, 'Hash with arrays expected') unless array.is_a?(Enumerable)
 
         raise(ArgumentError, 'Hash with arrays of strings expected') unless array.all? { |value| value.is_a?(String) }
       end

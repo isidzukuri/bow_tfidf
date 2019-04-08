@@ -64,7 +64,7 @@ RSpec.describe BowTfidf::BagOfWords do
       expect { instance.add_labeled_data!(key: '') }.to raise_error(ArgumentError)
       expect { instance.add_labeled_data!(key: [{}]) }.to raise_error(ArgumentError)
       expect { instance.add_labeled_data!(key: [11]) }.to raise_error(ArgumentError)
-      expect { instance.add_labeled_data!(key: ['valid'], key2: {}) }.to raise_error(ArgumentError)
+      expect { instance.add_labeled_data!(key: ['valid'], key2: '') }.to raise_error(ArgumentError)
     end
   end
 end
