@@ -13,10 +13,10 @@ module BowTfidf
     def call(text)
       raise(ArgumentError, 'String instance expected') unless text.is_a?(String)
 
-      items = split(text)
+      raw_tokens = split(text)
 
-      items.each do |token|
-        process_item(token)
+      raw_tokens.each do |token|
+        process_token(token)
       end
 
       tokens
@@ -28,7 +28,7 @@ module BowTfidf
       text.split(SPLIT_REGEX)
     end
 
-    def process_item(token)
+    def process_token(token)
       return if token.length < TOKEN_MIN_LENGTH
       return if token.length > TOKEN_MAX_LENGTH
       return if token.scan(/\D/).empty? # skip if str contains only digits

@@ -69,7 +69,6 @@ classifier.call(['word2' 'word3'])
     - In current implementation TFIDF tool ignores such words and not adding it to BOW. It is done with assumption that less frequent words should exists.
 
 ### Performance
-Currently module `BowTfidf` it is algorithm written in ruby. But its not optimized.
 To improve performance and memmory usage create dump of built BOW with light data structure(without unnecessary for classifier attributes) and custom classifier which can work with the dump.
 
 ### Split text into words(tokens)
