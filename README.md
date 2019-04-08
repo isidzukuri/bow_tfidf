@@ -55,7 +55,8 @@ bow.words
 #         }
 #       },
 #       idf: 0.47712125471966244
-#     }
+#     },
+#     ...
 #}
 
 bow.categories
@@ -65,6 +66,7 @@ bow.categories
 #        key: :category1,
 #        words: Set['word', 'word1']
 #    },
+#    ...
 #}
 ```
 
