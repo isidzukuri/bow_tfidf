@@ -50,7 +50,6 @@ bow.words
 #    'word1' => {
 #       categories: {
 #         1 => {
-#           entries: 1,
 #           tf: 0.3010299956639812,
 #           tfidf: 0.14362780923945326
 #         }
