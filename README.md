@@ -49,7 +49,7 @@ bow.words
 #{
 #    'word1' => {
 #       categories: {
-#         0 => {
+#         1 => {
 #           entries: 1,
 #           tf: 0.3010299956639812,
 #           tfidf: 0.14362780923945326
@@ -62,7 +62,7 @@ bow.words
 bow.categories
 #{
 #    category1: {
-#        id: 0,
+#        id: 1,
 #        key: :category1,
 #        words: Set['word', 'word1']
 #    },
