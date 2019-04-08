@@ -36,7 +36,7 @@ Or install it yourself as:
 First of all bag of words with computed tfidf for each word should be created. For this add labeled words as a hash to bag of words:
 
 ```ruby
-bow = Tfidf::BagOfWords.new
+bow = BowTfidf::BagOfWords.new
 bow.add_labeled_data!({
   category1: ['word', 'word1'],
   category2: ['word', 'word2']
