@@ -6,11 +6,12 @@ module BowTfidf
       raise(ArgumentError, 'BowTfidf::BagOfWords instance expected') unless bow.is_a?(BowTfidf::BagOfWords)
 
       @bow = bow
-      @score = {}
     end
 
     def call(tokens)
       raise(ArgumentError, 'Array of strings expected') unless tokens.is_a?(Array)
+
+      @score = {}
 
       tokens.each do |word|
         process_word(word)
