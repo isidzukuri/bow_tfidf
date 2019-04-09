@@ -43,6 +43,32 @@ bow.add_labeled_data!({
   category3: ['word', 'word2', 'word3']
   })
 ```
+Instance of `BowTfidf::BagOfWords` responds to `words` and `categories` methods:
+```ruby
+bow.words
+#{
+#    'word1' => {
+#       categories: {
+#         1 => {
+#           tf: 0.3010299956639812,
+#           tfidf: 0.14362780923945326
+#         }
+#       },
+#       idf: 0.47712125471966244
+#     },
+#     ...
+#}
+
+bow.categories
+#{
+#    category1: {
+#        id: 1,
+#        key: :category1,
+#        words: Set['word', 'word1']
+#    },
+#    ...
+#}
+```
 
 To identify category of text pass array of words as argument to category classifier:
 ```ruby
