@@ -1,0 +1,6 @@
+lib/bow_tfidf.rb b49f21259baa79f03f743478c11c1733d0afaff6
+lib/bow_tfidf/version.rb 9b3a82963210269968f685dba19063863258df8b
+lib/bow_tfidf/tokenizer.rb 3e04a5d7c7de300f5c6202d4e3ac606afa6a08cc
+lib/bow_tfidf/classifier.rb ff053c3d9f9c495584ca78ee5db29f13f5fac76d
+lib/bow_tfidf/computation.rb 3f889385b245e6dd01bc6751778c5657f1767932
+lib/bow_tfidf/bag_of_words.rb 84d2170d67c577edb97f8166921103df4ab772f7
