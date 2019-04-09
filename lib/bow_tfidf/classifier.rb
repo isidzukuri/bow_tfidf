@@ -20,6 +20,8 @@ module BowTfidf
       result
     end
 
+    private
+
     def find_word(word)
       bow.words[word]
     end
@@ -29,8 +31,6 @@ module BowTfidf
 
       bow.categories.values.find { |category| category[:id] == id }
     end
-
-    private
 
     def process_word(word)
       return unless (word_data = find_word(word.to_s))
