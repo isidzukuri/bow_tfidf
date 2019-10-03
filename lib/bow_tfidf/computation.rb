@@ -46,8 +46,6 @@ module BowTfidf
         category[:words].each do |category_word|
           next unless words[category_word]
 
-          # how many times the word occurs in the category / the number of words in category
-          # tf = category_word_attrs[:entries].to_f/category_attrs[:words].length
           tf = Math.log10(1 + words[category_word][:categories][category[:id]][:entries])
 
           words[category_word][:categories][category[:id]][:tf] = tf
