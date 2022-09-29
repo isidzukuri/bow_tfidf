@@ -39,7 +39,7 @@ First of all bag of words with computed tfidf for each word should be created. F
 bow = BowTfidf::BagOfWords.new
 bow.add_labeled_data!({
   category1: ['word', 'word1'],
-  category2: ['word', 'word2']
+  category2: ['word', 'word2'],
   category3: ['word', 'word2', 'word3']
   })
 ```
@@ -88,7 +88,7 @@ classifier.call(['word2' 'word3'])
 
 ### When classifier cannot recognize category:
 
-1. all given words not in the BOW.
+1. all given words are not in the BOW.
     - **Solution:** update BOW with new words.
 
 2. each of given words belongs to all categories
@@ -96,6 +96,9 @@ classifier.call(['word2' 'word3'])
 
 ### Performance
 To improve performance and memmory usage create dump of built BOW with light data structure(without unnecessary for classifier attributes) and custom classifier which can work with the dump.
+```
+# TODO
+```
 
 ### Split text into words(tokens)
 ```ruby
