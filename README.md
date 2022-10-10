@@ -73,7 +73,7 @@ bow.categories
 To identify category of text pass array of words as argument to category classifier:
 ```ruby
 classifier = BowTfidf::Classifier.new(bow)
-classifier.call(['word2' 'word3'])
+classifier.call(['word2', 'word3'])
 # {
 #    category_key: :category3,
 #    score: {
@@ -92,7 +92,7 @@ classifier.call(['word2' 'word3'])
     - **Solution:** update BOW with new words.
 
 2. each of given words belongs to all categories
-    - In current implementation TFIDF tool ignores such words and not adding it to BOW. It is done with assumption that less frequent words should exists.
+    - In current implementation TFIDF tool ignores such words and does not add it to BOW. It is done with assumption that less frequent words should exists.
 
 ### Performance
 To improve performance and memmory usage create dump of built BOW with light data structure(without unnecessary for classifier attributes) and custom classifier which can work with the dump.
